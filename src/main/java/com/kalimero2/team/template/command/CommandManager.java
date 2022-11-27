@@ -5,14 +5,14 @@ import cloud.commandframework.bukkit.CloudBukkitCapabilities;
 import cloud.commandframework.execution.CommandExecutionCoordinator;
 import cloud.commandframework.paper.PaperCommandManager;
 import com.google.common.collect.ImmutableList;
-import com.kalimero2.team.template.TemplatePlugin;
+import com.kalimero2.team.template.BedrockSkinGrabberPlugin;
 import org.bukkit.command.CommandSender;
 
 import java.util.function.UnaryOperator;
 
 public class CommandManager extends PaperCommandManager<CommandSender> {
 
-    public CommandManager(final TemplatePlugin plugin) throws Exception {
+    public CommandManager(final BedrockSkinGrabberPlugin plugin) throws Exception {
         super(
                 plugin,
                 CommandExecutionCoordinator.simpleCoordinator(),
@@ -38,7 +38,7 @@ public class CommandManager extends PaperCommandManager<CommandSender> {
 
 
         ImmutableList.of(
-                new TemplateCommand(plugin, this)
+                new BedrockSkinGrabberCommand(plugin, this)
         ).forEach(CommandHandler::register);
 
 

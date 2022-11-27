@@ -4,4 +4,4 @@ pluginManagement {
   }
 }
 
-rootProject.name = "plugin-template"
+rootProject.name = "bedrockskin-grabber"

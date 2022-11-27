@@ -3,7 +3,11 @@ package com.kalimero2.team.template;
 import com.kalimero2.team.template.command.CommandManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class TemplatePlugin extends JavaPlugin {
+import java.io.IOException;
+
+import static com.kalimero2.team.template.util.GetRequestUtil.sendHttpGETRequest;
+
+public final class BedrockSkinGrabberPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("onEnable has been invoked!");

@@ -1,13 +1,13 @@
 package com.kalimero2.team.template.command;
 
 
-import com.kalimero2.team.template.TemplatePlugin;
+import com.kalimero2.team.template.BedrockSkinGrabberPlugin;
 
 public abstract class CommandHandler {
-    protected final TemplatePlugin plugin;
+    protected final BedrockSkinGrabberPlugin plugin;
     protected final CommandManager commandManager;
 
-    protected CommandHandler(TemplatePlugin plugin, CommandManager commandManager) {
+    protected CommandHandler(BedrockSkinGrabberPlugin plugin, CommandManager commandManager) {
         this.plugin = plugin;
         this.commandManager = commandManager;
     }
