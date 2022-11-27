@@ -14,11 +14,14 @@ description = "Plugin Template"
 repositories {
   mavenCentral()
   maven("https://papermc.io/repo/repository/maven-public/")
+  maven("https://repo.opencollab.dev/maven-snapshots/")
 }
 
 dependencies {
   compileOnly("io.papermc.paper","paper-api","1.19.2-R0.1-SNAPSHOT")
   implementation("cloud.commandframework", "cloud-paper", "1.7.1")
+  compileOnly("org.geysermc.floodgate", "api", "2.2.0-SNAPSHOT")
+  implementation("com.fasterxml.jackson.core", "jackson-databind", "2.2.3")
 }
 
 java {
@@ -26,10 +29,11 @@ java {
 }
 
 bukkit {
-  main = "com.kalimero2.team.template.TemplatePlugin"
+  main = "com.kalimero2.team.template.BedrockSkinGrabberPlugin"
   apiVersion = "1.19"
   load = BukkitPluginDescription.PluginLoadOrder.STARTUP
-  authors = listOf("Author")
+  authors = listOf("Schwerthecht")
+  softDepend = listOf("floodgate")
 }
 
 tasks {
